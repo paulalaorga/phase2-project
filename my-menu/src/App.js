@@ -1,6 +1,7 @@
 import menu from './menu.png';
 import './App.css';
 import NewRecipe from './Components/NewRecipe';
+import RecipeCollection from './Components/RecipeCollection';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
        
       </header>
       <NewRecipe />
+      <RecipeCollection />
     </div>
   );
 }

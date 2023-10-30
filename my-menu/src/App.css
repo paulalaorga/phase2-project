@@ -137,3 +137,7 @@ button:hover {
   font-family: monospace;
   margin: 3px;
 }
+
+.ingredients-list {
+  text-align: left;
+}

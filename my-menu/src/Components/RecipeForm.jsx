@@ -22,7 +22,7 @@ export default function RecipeForm() {
     };
 
     // POST the JSON data to a file or server (replace with your implementation).
-    fetch(" http://localhost:3000/toys", {
+    fetch("http://localhost:3000/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
