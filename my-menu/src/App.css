@@ -105,7 +105,17 @@ button:hover {
 }
 
 .add-recipe-form {
-  width: 80%
+  width: 80%;
+ justify-content: stretch;
+ align-content: flex-start;
+}
+
+.ingredients-list {
+  text-align: left;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+
 }
 
 .submit {
@@ -138,6 +148,7 @@ button:hover {
   margin: 3px;
 }
 
-.ingredients-list {
-  text-align: left;
+.recipe-collection {
+  display: flex;
 }
+

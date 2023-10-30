@@ -17,7 +17,7 @@ function RecipeCollection() {
   return (
     <div>
       <h1>Recipe Collection</h1>
-      <ul>
+      <ul className='recipe-collection'>
         {recipes.map((recipe) => (
           <ul className='recipe-list' key={recipe.id}>
             <h2>{recipe.recipe_name}</h2>

@@ -7,21 +7,18 @@
         "eggs": 2,
         "olive oil": "50ml",
         "bread": "2 slices"
-      }
+      },
+      "pax": 1
     },
-    {
-      "name": "",
-      "ingredients": [
-        ""
-      ],
-      "id": 2
-    },
-    {
-      "name": "",
-      "ingredients": [
-        ""
-      ],
-      "id": 3
-    }
+   {
+    "id": 2,
+      "recipe_name": "Pasta",
+      "ingredients": {
+        "spaguetti": 2,
+        "olive oil": "50ml",
+        "sauce": "100ml"
+      },
+      "pax": 1
+  }
   ]
 }

@@ -1,27 +1,43 @@
 import React, { useState } from "react";
+import IngredientsList from "./IngredientsList"; // Import the IngredientList component
 
 export default function RecipeForm() {
   const [recipeName, setRecipeName] = useState("");
-  const [recipeIngredients, setRecipeIngredients] = useState("");
+  const [ingredientName, setIngredientName] = useState("");
+  const [ingredientAmount, setIngredientAmount] = useState("");
+  const [recipeIngredients, setRecipeIngredients] = useState([]);
 
   const handleRecipeNameChange = (event) => {
     setRecipeName(event.target.value);
   };
 
-  const handleRecipeIngredientsChange = (event) => {
-    setRecipeIngredients(event.target.value);
+  const handleIngredientNameChange = (event) => {
+    setIngredientName(event.target.value);
+  };
+
+  const handleIngredientAmountChange = (event) => {
+    setIngredientAmount(event.target.value);
+  };
+
+  const addIngredient = () => {
+    if (ingredientName && ingredientAmount) {
+      const ingredient = {
+        name: ingredientName,
+        amount: ingredientAmount,
+      };
+      setRecipeIngredients([...recipeIngredients, ingredient]);
+      setIngredientName("");
+      setIngredientAmount("");
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Create a JSON object with the data.
     const recipeData = {
       name: recipeName,
-      ingredients: recipeIngredients.split("\n").map((ingredient) => ingredient.trim()),
+      ingredients: recipeIngredients,
     };
 
-    // POST the JSON data to a file or server (replace with your implementation).
     fetch("http://localhost:3000/recipes", {
       method: "POST",
       headers: {
@@ -39,6 +55,7 @@ export default function RecipeForm() {
   };
 
   return (
+    <div>
     <form className="add-recipe-form" onSubmit={handleSubmit}>
       <label className="input-text">
         Recipe name:
@@ -50,14 +67,41 @@ export default function RecipeForm() {
           onChange={handleRecipeNameChange}
         />
         Ingredients:
-        <textarea
-          className="input-text"
-          name="recipe-ingredients"
-          value={recipeIngredients}
-          onChange={handleRecipeIngredientsChange}
-        />
+        <div>
+          <input
+            className="input-text"
+            type="text"
+            name="ingredient-name"
+            placeholder="Ingredient name"
+            value={ingredientName}
+            onChange={handleIngredientNameChange}
+          />
+          <input
+            className="input-text"
+            type="text"
+            name="ingredient-amount"
+            placeholder="Amount"
+            value={ingredientAmount}
+            onChange={handleIngredientAmountChange}
+          />
+          <button type="button" onClick={addIngredient}>
+            Add Ingredient
+          </button>
+        </div>
+        <ul>
+          {recipeIngredients.map((ingredient, index) => (
+            <li key={index}>
+              {ingredient.name}: {ingredient.amount}
+            </li>
+          ))}
+          <IngredientsList ingredients={recipeIngredients} />
+        </ul>
       </label>
+      
       <input className="submit" type="submit" value="Submit" />
     </form>
+    {/* Display the ingredient list using the IngredientList component */}
+    </div>
   );
 }
+  

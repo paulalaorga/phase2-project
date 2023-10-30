@@ -11,7 +11,7 @@ function NewRecipe() {
   return (
     <div>
       <button id="new-recipe-btn" onClick={toggleForm}>
-        {showForm ? "Close Form" : "New Recipe"}
+        {showForm ? "Close" : "New Recipe"}
       </button>
       {showForm && (
       <RecipeForm />
