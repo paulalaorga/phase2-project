@@ -22,10 +22,10 @@ function RecipeCollection() {
           <ul className='recipe-list' key={recipe.id}>
             <h2>{recipe.recipe_name}</h2>
             <ul className='ingredients-list'>
-                {Object.entries(recipe.ingredients).map(([name, amount]) => 
+               {/*  {Object.entries(recipe.ingredients).map(([name, amount]) => 
                 <li key={name}>
-                {name}: {amount}
-                </li>)}
+                {name}: {amount} 
+                </li>)}*/}
             </ul>
           </ul>
         ))}
