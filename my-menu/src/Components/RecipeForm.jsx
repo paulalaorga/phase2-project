@@ -21,11 +21,25 @@ export default function RecipeForm() {
 
   const addIngredient = () => {
     if (ingredientName && ingredientAmount) {
-      const ingredient = {
-        name: ingredientName,
-        amount: ingredientAmount,
-      };
-      setRecipeIngredients([...recipeIngredients, ingredient]);
+      // Check if the ingredient with the same name already exists
+      const existingIngredientIndex = recipeIngredients.findIndex(
+        (ingredient) => ingredient.name === ingredientName
+      );
+
+      if (existingIngredientIndex !== -1) {
+        // If the ingredient already exists, update its amount
+        const updatedIngredients = [...recipeIngredients];
+        updatedIngredients[existingIngredientIndex].amount = ingredientAmount;
+        setRecipeIngredients(updatedIngredients);
+      } else {
+        // If the ingredient doesn't exist, add it to the array
+        const ingredient = {
+          name: ingredientName,
+          amount: ingredientAmount,
+        };
+        setRecipeIngredients([...recipeIngredients, ingredient]);
+      }
+
       setIngredientName("");
       setIngredientAmount("");
     }
@@ -38,7 +52,7 @@ export default function RecipeForm() {
       ingredients: recipeIngredients,
     };
 
-    fetch("http://localhost:3000/recipes", {
+    fetch("https://my-menu-app.onrender.com/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,12 +60,7 @@ export default function RecipeForm() {
       body: JSON.stringify(recipeData),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log("Recipe data has been saved:", data);
-      })
-      .catch((error) => {
-        console.error("Error saving recipe data:", error);
-      });
+      
   };
 
   return (
@@ -62,7 +71,7 @@ export default function RecipeForm() {
         <input
           className="input-text"
           type="text"
-          name="recipe-name"
+          name="recipe_name"
           value={recipeName}
           onChange={handleRecipeNameChange}
         />
@@ -94,13 +103,11 @@ export default function RecipeForm() {
               {ingredient.name}: {ingredient.amount}
             </li>
           ))}
-          <IngredientsList ingredients={recipeIngredients} />
         </ul>
       </label>
       
       <input className="submit" type="submit" value="Submit" />
     </form>
-    {/* Display the ingredient list using the IngredientList component */}
     </div>
   );
 }

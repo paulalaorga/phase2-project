@@ -150,5 +150,14 @@ button:hover {
 
 .recipe-collection {
   display: flex;
+  flex-flow: wrap;
+
 }
 
+.ingredients-table {
+  text-align: left;
+  border: double;
+}
+thead {
+  outline-style: double;
+}
