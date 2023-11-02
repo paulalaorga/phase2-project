@@ -5,20 +5,13 @@ import RecipeForm from './RecipeForm';
 
 function NavBar() {
   const [recipes, setRecipes] = useState([]); // Rename state variable
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('https://my-menu-app.onrender.com/recipes')
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
-        setLoading(false);
       })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
   }, []);
 
   return (

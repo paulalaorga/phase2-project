@@ -12,14 +12,14 @@ function RecipeCollection(props) {
 
   const selectRecipe = (recipe) => {
     setSelectedRecipe(recipe);
-    setShowRecipe(true); // Show the recipe when a recipe is selected.
+    setShowRecipe(true); 
   };
   return (
     <div>
       <h1>Recipe Collection</h1>
       <ul className="recipe-collection">
          {props.recipes.map((recipe) => (
-          <li className="recipe-list" key={recipe.recipe_name}>
+          <li className="recipe-list" key={recipe.id}>
             <button className="recipe-button" onClick={() => { selectRecipe(recipe); toggleRecipe(); }}>
               {recipe.recipe_name}
             </button>

@@ -47,7 +47,7 @@ export default function RecipeForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const recipeData = {
-      name: recipeName,
+      recipe_name: recipeName,
       ingredients: recipeIngredients,
     };
 
@@ -65,17 +65,8 @@ export default function RecipeForm() {
   return (
     <div>
     <form className="add-recipe-form" onSubmit={handleSubmit}>
-      <label className="input-text">
-        Recipe name:
-        <input
-          className="input-text"
-          type="text"
-          name="recipe_name"
-          value={recipeName}
-          onChange={handleRecipeNameChange}
-        />
+        <div className="ingredients-container">
         Ingredients:
-        <div>
           <input
             className="input-text"
             type="text"
@@ -96,14 +87,23 @@ export default function RecipeForm() {
             Add Ingredient
           </button>
         </div>
-        <ul>
+        <div className="Recipe-name-container">
+        Recipe name:
+        <input
+          className="input-text"
+          type="text"
+          name="recipe_name"
+          value={recipeName}
+          onChange={handleRecipeNameChange}
+          />
+          </div>
+      <ul className="ingredients-list"> 
           {recipeIngredients.map((ingredient, index) => (
             <li key={index}>
               {ingredient.name}: {ingredient.amount}
             </li>
           ))}
         </ul>
-      </label>
       
       <input className="submit" type="submit" value="Submit" />
     </form>

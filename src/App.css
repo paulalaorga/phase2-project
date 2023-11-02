@@ -60,12 +60,12 @@ body {
   margin: 2rem;
 }
 
-.card {
+.recipe-card {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
   width: 15rem;
-  height: 25rem;
+  height: auto;
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #151515
@@ -108,16 +108,29 @@ button:hover {
 }
 
 .add-recipe-form {
+  margin-top: 20px;
   width: 80%;
- justify-content: stretch;
- align-content: flex-start;
+ align-content: center;
+ display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  grid-template-rows: auto;
+  gap: 16px; /* Add some gap between columns */
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.ingredients-container {
+
+}
+
+.Recipe-name-container {
+  text-align: left;
+  grid-column: 2 / 3;
 }
 
 .ingredients-list {
   text-align: left;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
+  grid-column: 2;
 
 }
 
@@ -133,6 +146,7 @@ button:hover {
   text-align: center;
   font-family: monospace;
   margin: 1px;
+  grid-column: span 2;
 }
 
 .submit:hover {
@@ -158,11 +172,19 @@ button:hover {
 }
 
 .ingredients-table {
+  font-size: 1rem;
   text-align: left;
   border: double;
 }
+
+/* .ingredients-table:hoover {
+  background-color: rgb(16, 15, 15);
+  border: #fffcfc solid 1px;
+  color: #fbfafa;
+} */
 thead {
-  outline-style: double;
+  font-variant-caps: all-petite-caps;
+  outline: double;
 }
 .navbar {
   background-color: #333;
@@ -213,8 +235,13 @@ thead {
 
 .recipe-list {
   display: inline-flex;
+  
 }
-
+.recipe-button {
+  border-style: inset;
+  font-variant-caps: small-caps;
+  background-color: #515458
+}
 
 
 
