@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import IngredientsList from "./IngredientsList"; // Import the IngredientList component
 
 export default function RecipeForm() {
   const [recipeName, setRecipeName] = useState("");

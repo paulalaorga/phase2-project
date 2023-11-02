@@ -1,31 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import Ingredients from "./Ingredients";
+import React, { useState } from 'react';
+import RecipeCard from './RecipeCard';
 
-function RecipeCollection() {
-  const [recipes, setRecipes] = useState([]);
+function RecipeCollection(props) {
+  const [showRecipe, setShowRecipe] = useState(false);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  useEffect(() => {
-    // Fetch data from your JSON Server or API
-    fetch('https://my-menu-app.onrender.com/recipes')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-        setRecipes(data); // Update to access the 'recipes' array
-      })
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+  const toggleRecipe = () => {
+    setShowRecipe(!showRecipe);
+  };
+
+  const selectRecipe = (recipe) => {
+    setSelectedRecipe(recipe);
+    setShowRecipe(true); // Show the recipe when a recipe is selected.
+  };
 
   return (
     <div>
       <h1>Recipe Collection</h1>
-      <ul className='recipe-collection'>
-        {recipes.map((recipe) => (
-          <ul className='recipe-list' key={recipe.id}>
-            <h2>{recipe.recipe_name}</h2>
-            <Ingredients ingredients={recipe.ingredients}/>
-          </ul>
+      <ul className="recipe-collection">
+        {props.recipe.map((recipe) => (
+          <li className="recipe-list "key={recipe.id}>
+            <button className="recipe-button" onClick={() => { selectRecipe(recipe); toggleRecipe(); }}>
+              {recipe.recipe_name}
+            </button>
+          </li>
         ))}
       </ul>
+      {showRecipe && selectedRecipe && (
+        <RecipeCard recipe={selectedRecipe} />
+      )}
     </div>
   );
 }

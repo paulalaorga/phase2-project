@@ -76,6 +76,9 @@ body {
   height: 12rem;
   width: auto;
 }
+#new-recipe-btn {
+  
+}
 
 button {
   position: relative;
@@ -161,3 +164,57 @@ button:hover {
 thead {
   outline-style: double;
 }
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+
+.nav-links li {
+  margin-right: 20px;
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.collapsible-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  color: black;
+}
+
+.collapsible-content.open {
+  max-height: 500px; /* Adjust the height according to your content */
+}
+
+.recipe-list {
+  display: inline-flex;
+}
+
+
+
+
