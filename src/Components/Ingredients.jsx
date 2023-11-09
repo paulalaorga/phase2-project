@@ -25,8 +25,7 @@ export default function Ingredients({
     } else {
       setShoppingList([...shoppingList, ingredient]);
     }
-
-    // Call the onAddToShoppingList function (if needed)
+    
     onAddToShoppingList(ingredient);
   }
 

@@ -5,19 +5,9 @@ import NavBar from './Components/NavBar';
 import RecipeCollection from './Components/RecipeCollection';
 import RecipeForm from './Components/RecipeForm';
 import ShoppingList from './Components/ShoppingList';
-import { useState } from 'react';
 
-function App() {
-  const [recipes, setRecipes] = useState([]); // Rename state variable
-  const [shoppingList, setShoppingList] = useState([]); // Add a state variable for the shopping list
-
-  function addRecipe(newRecipe) {
-    setRecipes([...recipes, newRecipe])
-    }
-  
-    const handleAddToShoppingList = (ingredient) => {
-      setShoppingList([...shoppingList, ingredient]);
-    }
+function App({ recipes, shoppingList }) {
+ 
     
   return (
     <div className="App">

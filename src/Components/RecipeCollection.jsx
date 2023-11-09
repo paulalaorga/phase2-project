@@ -2,10 +2,10 @@ import React, { useState,useEffect } from 'react';
 import RecipeCard from './RecipeCard';
 import ShoppingList from './ShoppingList';
 
-function RecipeCollection(props) {
+export default function RecipeCollection() {
   const [showRecipe, setShowRecipe] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
-  const [shoppingList, setShoppingList] = useState([]); // Shopping list state
+  const [shoppingList, setShoppingList] = useState([]); 
   const [recipeState, setRecipeState] = useState({
     recipes: [],
   });
@@ -44,7 +44,8 @@ function RecipeCollection(props) {
 
   const addToShoppingList = (ingredient) => {
     setShoppingList([...shoppingList, ingredient]);
-  };
+  }
+  
 
   return (
     <div>
@@ -70,4 +71,4 @@ function RecipeCollection(props) {
   );
 }
 
-export default RecipeCollection;
+
