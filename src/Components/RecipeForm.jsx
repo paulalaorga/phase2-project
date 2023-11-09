@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import addRecipe from "./NavBar.jsx"
 
 export default function RecipeForm() {
   const [recipeName, setRecipeName] = useState("");
@@ -20,18 +21,15 @@ export default function RecipeForm() {
 
   const addIngredient = () => {
     if (ingredientName && ingredientAmount) {
-      // Check if the ingredient with the same name already exists
       const existingIngredientIndex = recipeIngredients.findIndex(
         (ingredient) => ingredient.name === ingredientName
       );
 
       if (existingIngredientIndex !== -1) {
-        // If the ingredient already exists, update its amount
         const updatedIngredients = [...recipeIngredients];
         updatedIngredients[existingIngredientIndex].amount = ingredientAmount;
         setRecipeIngredients(updatedIngredients);
       } else {
-        // If the ingredient doesn't exist, add it to the array
         const ingredient = {
           name: ingredientName,
           amount: ingredientAmount,
@@ -59,7 +57,7 @@ export default function RecipeForm() {
       body: JSON.stringify(recipeData),
     })
       .then((response) => response.json())
-      
+      .then(data => addRecipe(data))
   };
 
   return (

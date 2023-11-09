@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import RecipeCollection from './RecipeCollection';
-import RecipeForm from './RecipeForm';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function NavBar() {
-  const [recipes, setRecipes] = useState([]); // Rename state variable
-
-  useEffect(() => {
-    fetch('https://my-menu-app.onrender.com/recipes')
-      .then((response) => response.json())
-      .then((data) => {
-        setRecipes(data);
-      })
-  }, []);
-
+ 
   return (
     <>
       <nav className="navbar">
@@ -26,10 +16,6 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-      <Routes>
-        <Route path="/RecipeForm" element={<RecipeForm />} />
-        <Route path="/RecipeCollection" element={<RecipeCollection recipes={recipes} />} />
-      </Routes>
     </>
   );
 }
