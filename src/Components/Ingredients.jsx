@@ -1,13 +1,15 @@
 import React from "react";
 
-export default function Ingredients({
-  ingredients
-}) {
+export default function Ingredients({ ingredients, onCloneIngredient }) {
   function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }
 
-  
+  function handleCloneIngredient(ingredient) {
+    const clonedIngredient = { ...ingredient };
+    onCloneIngredient(clonedIngredient);
+  }
+
   return (
     <div>
       <table className="ingredients-table">
@@ -20,7 +22,7 @@ export default function Ingredients({
         <tbody>
           {ingredients.map((ingredient, index) => (
             <tr key={index}>
-              <td>
+              <td onClick={() => handleCloneIngredient(ingredient)}>
                 {capitalizeFirstLetter(ingredient.name)}
               </td>
               <td>{ingredient.amount}</td>

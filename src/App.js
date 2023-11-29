@@ -4,9 +4,9 @@ import './App.css';
 import NavBar from './Components/NavBar';
 import RecipeCollection from './Components/RecipeCollection';
 import RecipeForm from './Components/RecipeForm';
-import ShoppingList from './Components/ShoppingList';
+import ShoppingListManager from './Components/ShoppingListManager';
 
-function App({ recipes, shoppingList }) {
+function App({ recipes }) {
  
     
   return (
@@ -18,7 +18,7 @@ function App({ recipes, shoppingList }) {
        <Routes>
         <Route path="/RecipeForm" element={<RecipeForm />} />
         <Route path="/RecipeCollection" element={<RecipeCollection recipes={recipes} />} />
-        <Route path="/ShoppingList" element={<ShoppingList shoppingList={shoppingList} />} /> 
+        <Route path="/ShoppingListManager" element={<ShoppingListManager />} /> 
       </Routes> 
     </div>
   );

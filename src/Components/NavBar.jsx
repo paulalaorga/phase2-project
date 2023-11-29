@@ -14,6 +14,9 @@ function NavBar() {
           <li>
             <Link to="/RecipeCollection">Your Recipes</Link>
           </li>
+          <li>
+            <Link to="/ShoppingListManager">Shopping List</Link>
+          </li>
         </ul>
       </nav>
     </>
