@@ -1,0 +1,379 @@
+.desktop {
+    background-color: #f8f2e1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .desktop .div {
+    background-color: #f8f2e1;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .desktop .hero {
+    height: 240px;
+    left: 169px;
+    position: absolute;
+    top: 225px;
+    width: 1032px;
+  }
+  
+  .desktop .title {
+    height: 240px;
+    left: 160px;
+    position: absolute;
+    top: 0;
+    width: 712px;
+  }
+  
+  .desktop .overlap {
+    height: 240px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 568px;
+  }
+  
+  .desktop .f {
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 117px;
+  }
+  
+  .desktop .overlap-group {
+    height: 239px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 567px;
+  }
+  
+  .desktop .element {
+    height: 114px;
+    left: 268px;
+    position: absolute;
+    top: 0;
+    width: 295px;
+  }
+  
+  .desktop .img {
+    height: 114px;
+    left: 181px;
+    position: absolute;
+    top: 125px;
+    width: 238px;
+  }
+  
+  .desktop .o {
+    height: 239px;
+    left: 117px;
+    position: absolute;
+    top: 0;
+    width: 450px;
+  }
+  
+  .desktop .m {
+    height: 113px;
+    left: 0;
+    position: absolute;
+    top: 126px;
+    width: 171px;
+  }
+  
+  .desktop .d {
+    height: 240px;
+    left: 581px;
+    position: absolute;
+    top: 0;
+    width: 130px;
+  }
+  
+  .image-container2 {
+    position: relative;
+    width: 138px;
+    height: 240px;
+    left: 896px;
+    top: -2px;
+  }
+
+.image-container2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: swap 6s infinite;
+}
+
+.image-container2 .happy {
+  animation-delay: 0s;
+}
+
+.image-container2 .sad {
+  animation-delay: 3s;
+}
+  .image-container {
+    position: relative;
+    width: 138px;
+    height: 240px;
+    left: 896px;
+    top: -2px;
+  }
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: swap 6s infinite;
+}
+
+.image-container .happy {
+  animation-delay: 0s;
+}
+
+.image-container .sad {
+  animation-delay: 3s;
+}
+
+@keyframes swap {
+  0%, 49.9% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+  
+  .desktop .recipes {
+    height: 365px;
+    left: 171px;
+    position: absolute;
+    top: 585px;
+    width: 1041px;
+  }
+  
+  .desktop .row {
+    height: 162px;
+    left: 1px;
+    position: absolute;
+    top: 203px;
+    width: 1037px;
+  }
+  
+  .desktop .ellipse {
+    background-color: #ffd6d6;
+    border-radius: 82px/80px;
+    height: 160px;
+    left: 699px;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .ellipse-2 {
+    background-color: #ffe4cb;
+    border-radius: 82px/80px;
+    height: 160px;
+    left: 873px;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .fb {
+    height: 161px;
+    left: 176px;
+    position: absolute;
+    top: 1px;
+    width: 505px;
+  }
+  
+  .desktop .ellipse-3 {
+    background-color: #ecddfd;
+    border-radius: 82px/80px;
+    height: 160px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .row-2 {
+    height: 161px;
+    left: 1px;
+    position: absolute;
+    top: 2px;
+    width: 1037px;
+  }
+  
+  .desktop .ellipse-4 {
+    background-color: #fbe7b7;
+    border-radius: 82px/80px;
+    height: 160px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .fb-2 {
+    height: 161px;
+    left: 358px;
+    position: absolute;
+    top: 0;
+    width: 505px;
+  }
+  
+  .desktop .ellipse-5 {
+    height: 160px;
+    left: 873px;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .ellipse-6 {
+    background-color: #ffdada;
+    border-radius: 82px/80px;
+    height: 160px;
+    left: 176px;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .desktop .header {
+    background-color: transparent;
+    height: 45px;
+    left: 169px;
+    position: absolute;
+    top: 89px;
+    width: 1020px;
+  }
+  
+  .desktop .menu-button {
+    height: 45px;
+    left: 897px;
+    position: absolute;
+    top: 0;
+    width: 122px;
+  }
+  
+  .desktop .div-wrapper {
+    background-image: url(https://c.animaapp.com/iMLt5NrB/img/ellipse-22.svg);
+    background-size: 100% 100%;
+    height: 45px;
+    position: relative;
+    width: 120px;
+  }
+  
+  .desktop .text-wrapper {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 28px;
+    left: 32px;
+    letter-spacing: -0.91px;
+    line-height: 13px;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    transform: rotate(0.22deg);
+    width: 55px;
+  }
+  
+  .desktop .nav-bar {
+    height: 28px;
+    left: 285px;
+    position: absolute;
+    top: 9px;
+    width: 465px;
+  }
+  
+  .desktop .text-wrapper-2 {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 28px;
+    left: 0;
+    letter-spacing: -0.91px;
+    line-height: 13px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(0.22deg);
+    width: 55px;
+  }
+  
+  .desktop .text-wrapper-3 {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 28px;
+    left: 104px;
+    letter-spacing: -0.91px;
+    line-height: 13px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(0.22deg);
+    width: 100px;
+  }
+  
+  .desktop .text-wrapper-4 {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 28px;
+    left: 249px;
+    letter-spacing: -0.91px;
+    line-height: 13px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(0.22deg);
+    width: 98px;
+  }
+  
+  .desktop .text-wrapper-5 {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 28px;
+    left: 402px;
+    letter-spacing: -0.91px;
+    line-height: 13px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(0.22deg);
+    width: 55px;
+  }
+  
+  .desktop .food-m-app {
+    color: #000000;
+    font-family: "Krona One", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 1px;
+    left: 0;
+    letter-spacing: -1.92px;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 37px;
+    white-space: nowrap;
+  }
+  
