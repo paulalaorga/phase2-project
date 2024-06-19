@@ -19,6 +19,8 @@
     position: absolute;
     top: 225px;
     width: 1032px;
+    display: flex;
+    flex-direction: row;
   }
   
   .desktop .title {
@@ -94,10 +96,9 @@
   }
   
   .image-container2 {
-    position: relative;
+    position: absolute;
     width: 138px;
     height: 240px;
-    left: 896px;
     top: -2px;
   }
 
@@ -110,12 +111,12 @@
   animation: swap 6s infinite;
 }
 
-.image-container2 .happy {
-  animation-delay: 0s;
+.image-container2 .happy2 {
+  animation-delay: 3s;
 }
 
-.image-container2 .sad {
-  animation-delay: 3s;
+.image-container2 .sad2 {
+  animation-delay: 0s;
 }
   .image-container {
     position: relative;
@@ -151,7 +152,7 @@
   }
 }
   
-  .desktop .recipes {
+  .desktop .recipes-container {
     height: 365px;
     left: 171px;
     position: absolute;
@@ -285,9 +286,8 @@
     line-height: 13px;
     position: absolute;
     text-align: center;
-    top: 9px;
+    top: 15px;
     transform: rotate(0.22deg);
-    width: 55px;
   }
   
   .desktop .nav-bar {
@@ -311,7 +311,6 @@
     text-align: center;
     top: 0;
     transform: rotate(0.22deg);
-    width: 55px;
   }
   
   .desktop .text-wrapper-3 {
@@ -327,7 +326,6 @@
     text-align: center;
     top: 0;
     transform: rotate(0.22deg);
-    width: 100px;
   }
   
   .desktop .text-wrapper-4 {
@@ -343,23 +341,6 @@
     text-align: center;
     top: 0;
     transform: rotate(0.22deg);
-    width: 98px;
-  }
-  
-  .desktop .text-wrapper-5 {
-    color: #000000;
-    font-family: "Krona One", Helvetica;
-    font-size: 13px;
-    font-weight: 400;
-    height: 28px;
-    left: 402px;
-    letter-spacing: -0.91px;
-    line-height: 13px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    transform: rotate(0.22deg);
-    width: 55px;
   }
   
   .desktop .food-m-app {
@@ -377,3 +358,18 @@
     white-space: nowrap;
   }
   
+  .ellipse.property-default {
+    background-color: #fbe7b7;
+    border-radius: 82px/80px;
+    height: 160px;
+    position: relative;
+    width: 164px;
+}
+
+.ellipse.property {
+    height: 161px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 482px;
+}

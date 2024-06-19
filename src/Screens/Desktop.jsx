@@ -1,5 +1,9 @@
 import React from "react";
 import "./style.css";
+import Ellipse from "../Components/Buttons"
+import { Recipes } from "../Components/Recipes";
+import { NavBar } from "../Components/NavBar";
+import { Menu } from "../Components/Menu";
 
 export const Desktop = () => {
   return (
@@ -27,33 +31,11 @@ export const Desktop = () => {
           <img className="sad" alt="Sad" src="https://c.animaapp.com/iMLt5NrB/img/sad.svg" />
           </div>
         </div>
-        <div className="recipes">
-          <div className="row">
-            <div className="ellipse" />
-            <div className="ellipse-2" />
-            <img className="fb" alt="Fb" src="https://c.animaapp.com/iMLt5NrB/img/fb2.png" />
-            <div className="ellipse-3" />
-          </div>
-          <div className="row-2">
-            <div className="ellipse-4" />
-            <img className="fb-2" alt="Fb" src="https://c.animaapp.com/iMLt5NrB/img/fb1.png" />
-            <img className="ellipse-5" alt="Ellipse" src="https://c.animaapp.com/iMLt5NrB/img/ellipse-16.svg" />
-            <div className="ellipse-6" />
-          </div>
-        </div>
+       <Recipes />
         <header className="header">
-          <div className="menu-button">
-            <div className="div-wrapper">
-              <div className="text-wrapper">Menu</div>
-            </div>
-          </div>
-          <div className="nav-bar">
-            <div className="text-wrapper-2">Home</div>
-            <div className="text-wrapper-3">Recipe Book</div>
-            <div className="text-wrapper-4">New Recipe</div>
-            <div className="text-wrapper-5">About</div>
-          </div>
+         <Menu />
           <div className="food-m-app">FoodMApp</div>
+          <NavBar />
         </header>
       </div>
     </div>
