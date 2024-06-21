@@ -1,5 +1,6 @@
 import React from "react";
 import "../Screens/style.css"
+import { Ellipse } from "./Buttons";
 
 
 export const Recipes = () => {
@@ -7,8 +8,8 @@ export const Recipes = () => {
     return (
         <div className="recipes-container">
         <div className="row">
-        <div className="ellipse" />
-          <div className="ellipse-2" />
+        <Ellipse propertyDefaultClassName="ellipse"/>
+        <Ellipse propertyDefaultClassName="ellipse-2"/>
           <img className="fb" alt="Fb" src="https://c.animaapp.com/iMLt5NrB/img/fb2.png" />
           <div className="ellipse-3" />
         </div>
@@ -23,3 +24,4 @@ export const Recipes = () => {
 
 
 }
+

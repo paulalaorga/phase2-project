@@ -1,11 +1,10 @@
 import React from "react";
 import "./style.css";
-import Ellipse from "../Components/Buttons"
-import { Recipes } from "../Components/Recipes";
 import { NavBar } from "../Components/NavBar";
 import { Menu } from "../Components/Menu";
+import { Recipes } from "../Components/Recipes";
 
-export const Desktop = () => {
+const Desktop = () => {
   return (
     <div className="desktop">
       <div className="div">
@@ -31,13 +30,15 @@ export const Desktop = () => {
           <img className="sad" alt="Sad" src="https://c.animaapp.com/iMLt5NrB/img/sad.svg" />
           </div>
         </div>
-       <Recipes />
         <header className="header">
          <Menu />
           <div className="food-m-app">FoodMApp</div>
           <NavBar />
         </header>
+        <Recipes />
       </div>
     </div>
   );
 };
+
+export default Desktop;

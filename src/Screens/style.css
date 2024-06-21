@@ -176,6 +176,7 @@
     position: absolute;
     top: 0;
     width: 164px;
+    border: none; /* Explicitly set border to none */
   }
   
   .desktop .ellipse-2 {
@@ -367,9 +368,8 @@
 }
 
 .ellipse.property {
+    background-color: #fbe7b7;
     height: 161px;
-    left: 0;
-    position: absolute;
-    top: 0;
     width: 482px;
 }
+
